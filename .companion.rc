@@ -1,0 +1,12 @@
+export COMPANION_DIR=/home/pi/companion
+
+# copy default parameters if neccessary
+for default_param_file in $COMPANION_DIR/params/*.param.default; do
+    param_file=/home/pi/$(basename -- $(echo $default_param_file | sed "s/.default//"))
+    if [ ! -e "$param_file" ]; then
+        cp $default_param_file $param_file
+    fi
+done
+
+sudo -H -u pi screen -dm -S mavproxy $COMPANION_DIR/tools/telem.py
+
