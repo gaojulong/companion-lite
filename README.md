@@ -1,8 +1,16 @@
-### companion-Lite
+## companion-Lite
 
+### 基本功能
+
+- [x] mavlink转发
 - [ ] 自动查找设备
+- [ ] mavlink-camera-manager
 
 
+
+### CSI摄像头分支
+
+- [ ] CSI摄像头移植
 
 ### 注意
 
